@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Happy Birthday Mahi Ji ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:"DM Sans",sans-serif;background:#08050d;color:#fff;overflow-x:hidden;
+}
+body:before{
+content:"";position:fixed;inset:0;pointer-events:none;
+background:radial-gradient(circle at 20% 20%,rgba(224,82,157,.16),transparent 30%),
+radial-gradient(circle at 80% 70%,rgba(111,76,255,.15),transparent 30%);z-index:-2;
+}
+body:after{
+content:"";position:fixed;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px);
+background-size:90px 90px;opacity:.08;pointer-events:none;z-index:-1;
+}
+section{min-height:100vh;padding:90px 20px;display:flex;align-items:center;justify-content:center}
+.container{width:min(1100px,100%);margin:auto}.center{text-align:center}
+.eyebrow{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#e9a8ce;margin-bottom:25px}
+.hero{position:relative;text-align:center}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(60px,12vw,145px);line-height:.85;letter-spacing:-4px}
+.hero h1 span{display:block;background:linear-gradient(90deg,#fff,#ffafd7,#c6b5ff,#fff);
+-webkit-background-clip:text;color:transparent;background-size:250%;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:250%}}
+.hero-date{margin-top:30px;color:#b9aebd;letter-spacing:4px;font-size:13px}
+.btn{margin-top:40px;padding:16px 28px;border-radius:50px;border:1px solid rgba(255,255,255,.2);
+background:rgba(255,255,255,.08);color:white;cursor:pointer;backdrop-filter:blur(15px);transition:.35s}
+.btn:hover{transform:translateY(-4px);background:rgba(255,255,255,.14);box-shadow:0 15px 50px rgba(238,110,181,.2)}
+.scroll{position:absolute;bottom:35px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;color:#837887}
+
+.title{font-family:"Playfair Display",serif;font-size:clamp(42px,7vw,75px);margin-bottom:15px}
+.sub{color:#9f929f;line-height:1.8;max-width:650px;margin:0 auto 45px}
+.wishes{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.wish{padding:30px;border:1px solid rgba(255,255,255,.1);border-radius:28px;
+background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+backdrop-filter:blur(18px);box-shadow:0 20px 70px rgba(0,0,0,.3);transition:.4s}
+.wish:hover{transform:translateY(-8px) rotate(.3deg);border-color:rgba(255,169,214,.35)}
+.wish:nth-child(1){grid-column:span 7}.wish:nth-child(2){grid-column:span 5}
+.wish:nth-child(3){grid-column:span 5}.wish:nth-child(4){grid-column:span 7}
+.wish:nth-child(5){grid-column:3/span 8}
+.wish-number{color:#e999c3;font-size:11px;letter-spacing:3px;margin-bottom:18px}
+.wish h3{font-family:"Playfair Display",serif;font-size:28px;margin-bottom:15px}
+.wish p{color:#b7aab6;line-height:1.85;font-size:14px}
+
+/* PHOTOS */
+.photos{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:45px}
+.photo{overflow:hidden;border-radius:30px;border:1px solid rgba(255,255,255,.12);
+box-shadow:0 25px 80px rgba(0,0,0,.4);background:#151019;opacity:0;transform:translateY(50px) scale(.96)}
+.photo.show{animation:photoIn .9s ease forwards}
+.photo:nth-child(1){animation-delay:.1s}.photo:nth-child(2){animation-delay:.3s}
+.photo:nth-child(3){animation-delay:.5s}.photo:nth-child(4){animation-delay:.7s}
+@keyframes photoIn{to{opacity:1;transform:translateY(0) scale(1)}}
+.photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s}
+.photo:hover img{transform:scale(1.07)}
+.photo:nth-child(1){grid-column:span 7;height:500px}.photo:nth-child(2){grid-column:span 5;height:500px}
+.photo:nth-child(3){grid-column:span 5;height:400px}.photo:nth-child(4){grid-column:span 7;height:400px}
+
+/* PAGE 5 */
+.note{max-width:800px;margin:40px auto;padding:45px;border-radius:35px;border:1px solid rgba(255,255,255,.12);
+background:rgba(255,255,255,.06);backdrop-filter:blur(20px);box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.note p{font-family:"Playfair Display",serif;font-size:clamp(22px,4vw,32px);line-height:1.7;color:#eee}
+
+/* SURPRISE */
+.gift-wrap{position:relative;display:inline-block;margin:55px auto 25px}
+.gift{width:150px;height:140px;position:relative;cursor:pointer;transition:.5s}
+.gift:hover{transform:translateY(-10px) rotate(-2deg)}
+.gift-box{position:absolute;bottom:0;left:10px;width:130px;height:90px;border-radius:12px;
+background:linear-gradient(135deg,#e15b9c,#7547b9);box-shadow:0 20px 50px rgba(220,82,160,.25)}
+.gift-lid{position:absolute;top:30px;left:0;width:150px;height:35px;border-radius:10px;
+background:linear-gradient(135deg,#ff8fc4,#8755d2);z-index:2}
+.ribbon-v{position:absolute;left:65px;top:30px;width:20px;height:110px;background:#ffe6f3;z-index:3}
+.gift.open .gift-lid{animation:lid 1s forwards}
+@keyframes lid{to{transform:translateY(-70px) rotate(-10deg);opacity:0}}
+.final{max-height:0;overflow:hidden;transition:1.5s;max-width:850px;margin:auto}
+.final.show{max-height:900px}
+.final h3{font-family:"Playfair Display",serif;font-size:clamp(35px,6vw,65px);margin:25px 0;
+background:linear-gradient(90deg,#fff,#ffaad4,#bba9ff);-webkit-background-clip:text;color:transparent}
+.final p{max-width:720px;margin:auto;color:#b9acb8;line-height:1.9}
+.letter-box{margin:30px auto;padding:35px;border:1px solid rgba(255,255,255,.12);border-radius:28px;
+background:rgba(255,255,255,.05);backdrop-filter:blur(16px)}
+.letter-box h4{font-family:"Playfair Display",serif;font-size:30px;color:#ffd0e7;margin-bottom:18px}
+.letter-box p{font-family:"Playfair Display",serif;font-size:20px;line-height:1.8}
+
+/* PAGE 7 */
+.memory-card{max-width:780px;margin:auto;padding:45px;border-radius:35px;border:1px solid rgba(255,255,255,.12);
+background:rgba(255,255,255,.06);backdrop-filter:blur(20px);box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.memory-card p{color:#b9acb8;line-height:1.9;font-size:16px}
+
+/* PAGE 8 */
+.love-page{position:relative;overflow:hidden}
+.love-title{font-family:"Playfair Display",serif;font-size:clamp(70px,14vw,170px);line-height:.85;
+background:linear-gradient(90deg,#fff,#ffafd7,#c6b5ff,#fff);background-size:250%;
+-webkit-background-clip:text;color:transparent;animation:shine 4s linear infinite, lovePulse 2s ease-in-out infinite alternate}
+@keyframes lovePulse{from{transform:scale(1)}to{transform:scale(1.04)}}
+.love-heart{font-size:60px;display:inline-block;animation:heartBeat 1.3s ease-in-out infinite}
+@keyframes heartBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+
+/* LOCK */
+#lockPage{position:fixed;inset:0;z-index:5000;background:#08050d;display:flex}
+.lock-card{width:min(480px,92%);padding:42px 28px;border-radius:35px;border:1px solid rgba(255,255,255,.12);
+background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));backdrop-filter:blur(20px);
+box-shadow:0 25px 80px rgba(0,0,0,.5)}
+.lock-icon{font-size:55px;margin-bottom:20px}
+.lock-title{font-family:"Playfair Display",serif;font-size:42px;margin-bottom:12px}
+.lock-text{color:#a99da8;line-height:1.7;margin-bottom:25px}
+#yearInput{width:100%;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.18);
+background:rgba(0,0,0,.25);color:white;text-align:center;font-size:22px;letter-spacing:6px;outline:none}
+#yearInput:focus{border-color:#e999c3;box-shadow:0 0 25px rgba(233,153,195,.15)}
+.error{height:22px;color:#ff9fc9;font-size:13px;margin-top:12px}
+.unlock-btn{margin-top:8px;width:100%}
+
+/* CELEBRATION */
+#celebration{position:fixed;inset:0;z-index:4000;display:none;align-items:center;justify-content:center;
+background:rgba(8,5,13,.96);overflow:hidden}
+.celebrate-content{position:relative;z-index:3;text-align:center;animation:celebrateIn 1.4s ease forwards}
+@keyframes celebrateIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+.celebrate-small{letter-spacing:6px;color:#e9a8ce;font-size:12px;margin-bottom:22px}
+.celebrate-title{font-family:"Playfair Display",serif;font-size:clamp(55px,12vw,130px);line-height:.85;
+background:linear-gradient(90deg,#fff,#ffafd7,#c6b5ff,#fff);background-size:250%;
+-webkit-background-clip:text;color:transparent;animation:shine 3s linear infinite}
+.celebrate-title span{display:block;font-size:.75em}
+.confetti{position:absolute;top:-30px;animation:fall linear forwards;z-index:1}
+@keyframes fall{to{transform:translateY(115vh) rotate(720deg);opacity:0}}
+.balloon{position:absolute;bottom:-140px;font-size:55px;animation:balloonUp 5s ease-out forwards}
+@keyframes balloonUp{to{transform:translateY(-120vh) rotate(12deg);opacity:0}}
+#continueBtn{margin-top:40px;opacity:0;animation:fadeButton 1s ease 2.2s forwards}
+@keyframes fadeButton{to{opacity:1}}
+
+/* HEARTS */
+.heart{position:fixed;pointer-events:none;font-size:18px;animation:heart 3s linear forwards;z-index:9999}
+@keyframes heart{0%{transform:translateY(0) scale(.5);opacity:0}20%{opacity:1}
+100%{transform:translateY(-100vh) rotate(30deg) scale(1.5);opacity:0}}
+
+footer{padding:100px 20px;text-align:center}
+.footer-title{font-family:"Playfair Display",serif;font-size:clamp(45px,8vw,90px)}
+footer p{margin-top:20px;color:#817582}
+
+@media(max-width:700px){
+section{padding:70px 15px}.wishes{display:block}.wish{margin-bottom:16px}
+.photos{display:block}.photo,.photo:nth-child(1),.photo:nth-child(2),.photo:nth-child(3),.photo:nth-child(4){
+height:430px;margin-bottom:16px}.note{padding:30px 22px}.hero h1{letter-spacing:-2px}
+.love-title{font-size:clamp(58px,18vw,100px)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: LOCK -->
+<div id="lockPage">
+  <div class="container center">
+    <div class="lock-card">
+      <div class="lock-icon">🔒</div>
+      <div class="eyebrow">A Little Surprise</div>
+      <h1 class="lock-title">This Is Locked ♡</h1>
+      <p class="lock-text">Birthday surprise unlock karne ke liye<br>year of birth enter karo.</p>
+      <input id="yearInput" type="password" inputmode="numeric" maxlength="4" placeholder="YEAR OF BIRTH">
+      <div class="error" id="error"></div>
+      <button class="btn unlock-btn" onclick="unlock()">UNLOCK ✦</button>
+    </div>
+  </div>
+</div>
+
+<!-- CELEBRATION -->
+<div id="celebration">
+  <div class="celebrate-content">
+    <div class="celebrate-small">THE WAIT IS OVER ✦</div>
+    <div class="celebrate-title">HAPPY BIRTHDAY<span>MAHI JI ♡</span></div>
+    <button id="continueBtn" class="btn" onclick="enterWebsite()">CONTINUE TO YOUR SURPRISE ✦</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<section class="hero">
+<div class="container center">
+<div class="eyebrow">A Little Surprise • Made With Love</div>
+<h1>Happy Birthday<span>Mahi Ji ♡</span></h1>
+<div class="hero-date">21 · SEPTEMBER · 2006</div>
+<button class="btn" onclick="goWishes()">ENTER YOUR SURPRISE ✦</button>
+</div>
+<div class="scroll">SCROLL TO DISCOVER ↓</div>
+</section>
+
+<!-- PAGE 3: WISHES -->
+<section id="wishes">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Birthday Wishes</div>
+<h2 class="title">For Your Beautiful Journey ✨</h2>
+<p class="sub">A few words for the person whose birthday deserves a little extra celebration.</p>
+</div>
+
+<div class="wishes">
+<div class="wish"><div class="wish-number">01 · HAPPY BIRTHDAY</div>
+<h3>A Day As Special As You 🤍</h3>
+<p>Happy Birthday, Mahi Ji! 🎂 Tumhari life ka har naya saal tumhare liye naye moments, naye reasons to smile aur bahut saari khushiyan lekar aaye. Aaj ka din bilkul tumhari smile ki tarah beautiful ho. 🤍✨</p></div>
+
+<div class="wish"><div class="wish-number">02 · HAPPINESS</div>
+<h3>May Life Be Kind To You 🌸</h3>
+<p>Zindagi mein chahe kitne bhi ups and downs aayein, tumhare chehre ki smile kabhi kam na ho. Har ordinary day mein bhi tumhe koi na koi special moment milta rahe. Aur tum hamesha khush raho, bas itna kaafi hai. 🌙🤍</p></div>
+
+<div class="wish"><div class="wish-number">03 · DREAMS</div>
+<h3>Keep Chasing Your Dreams ✨</h3>
+<p>Jo dreams tumne apne liye dekhe hain, unhe ek-ek karke reality bante dekhna chahta hoon. Tumhari mehnat tumhe wahan tak le jaaye jahan tum khud ko dekhna chahti ho. Keep believing in yourself and keep shining. ✨</p></div>
+
+<div class="wish"><div class="wish-number">04 · BEAUTIFUL MOMENTS</div>
+<h3>Memories Worth Keeping 🧸</h3>
+<p>Aane wale saal mein tumhare paas yaadon ka ek beautiful collection ho. Kuch moments itne special ho ki unhe yaad karke bhi smile aa jaaye. Life tumhe bahut saare reasons de khush rehne ke. 🎀</p></div>
+
+<div class="wish"><div class="wish-number">05 · SOMEONE SPECIAL</div>
+<h3>Some People Stay Special ♡</h3>
+<p>Kuch log bina kuch special kiye bhi life mein special ban jaate hain. Tum unhi logon mein se ho, jinki presence apne aap mein ek memory ban jaati hai. Bas aise hi rehna—simple, genuine aur bilkul apni si. ♡✨</p></div>
+</div>
+</div>
+</section>
+
+<!-- PAGE 4: PHOTOS -->
+<section id="photoPage">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Our Little Memories</div>
+<h2 class="title">Moments Worth Keeping 📸</h2>
+<p class="sub">Some pictures don't need a caption. They simply become memories.</p>
+</div>
+<div class="photos">
+<div class="photo"><img src="photo1.jpg" alt="Mahi Ji"></div>
+<div class="photo"><img src="photo2.jpg" alt="Mahi Ji"></div>
+<div class="photo"><img src="photo3.jpg" alt="Mahi Ji"></div>
+<div class="photo"><img src="photo4.jpg" alt="Mahi Ji"></div>
+</div>
+</div>
+</section>
+
+<!-- PAGE 5 -->
+<section>
+<div class="container center">
+<div class="eyebrow">A Small Note</div>
+<h2 class="title">For The Beautiful Memories 🌙</h2>
+<div class="note">
+<p>Har memory ka apna ek little moment hota hai. Kuch moments waqt ke saath door ho jaate hain, lekin unki value kabhi kam nahi hoti. Bas isi tarah, life ke aane wale saare moments tumhare liye beautiful memories banate rahein. 🤍</p>
+</div>
+</div>
+</section>
+
+<!-- PAGE 6: SURPRISE BOX + LETTER -->
+<section>
+<div class="container center">
+<div class="eyebrow">One Last Surprise</div>
+<h2 class="title">There Is Something For You 🎁</h2>
+<p class="sub">Surprise box open karo... uske andar tumhare liye kuch words hain.</p>
+
+<div class="gift-wrap">
+<div class="gift" onclick="openGift()">
+<div class="gift-lid"></div>
+<div class="gift-box"></div>
+<div class="ribbon-v"></div>
+</div>
+</div>
+
+<p style="color:#9f929f">Tap the gift 🎁</p>
+
+<div class="final" id="final">
+<h3>FROM MY HEART TO YOUR HEART ♡</h3>
+<div class="letter-box">
+<h4>Dear Mahi Ji, 🤍</h4>
+<p>Ek time tha jab mai tumse bahut pyar karta tha, wo time ab bhi chal raha hai aur hamesha chalta rahega. Kuch feelings ko explain karna easy nahi hota, isliye bas itna kehna hai ki tum mere liye hamesha ek special person rahogi. Tumhari smile, tumhari memories aur tumse judi chhoti-chhoti baatein apni ek alag jagah rakhti hain. Aaj tumhare birthday par bas itna chahta hoon ki tum hamesha khush raho, smile karti raho aur life tumhe bahut saare beautiful moments de. Happy Birthday, Mahi Ji. 🎂🤍🎀</p>
+</div>
+<button class="btn" onclick="makeWish()">MAKE A WISH ✦</button>
+</div>
+</div>
+</section>
+
+<!-- PAGE 7 -->
+<section>
+<div class="container center">
+<div class="eyebrow">Before You Go</div>
+<h2 class="title">Keep This Little Memory ♡</h2>
+<div class="memory-card">
+<p>Ye website sirf ek birthday page nahi, balki kuch words, photos aur memories ko ek jagah rakhne ki chhoti si koshish hai. Jab bhi tum ise dobara dekho, hopefully tumhare face par wahi cute si smile aa jaaye. ✨</p>
+</div>
+</div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="love-page">
+<div class="container center">
+<div class="eyebrow">One Last Thing</div>
+<div class="love-heart">♡</div>
+<h2 class="love-title">LOVE YOU<br>MAHI</h2>
+<p class="sub" style="margin-top:35px">Happy Birthday once again. Keep smiling, keep shining. 🎂✨</p>
+</div>
+</section>
+
+<footer>
+<div class="footer-title">Happy Birthday,<br>Mahi Ji ♡</div>
+<p>Made with a little bit of code & a lot of feelings.</p>
+</footer>
+
+<script>
+function unlock(){
+  const input=document.getElementById("yearInput");
+  const error=document.getElementById("error");
+
+  if(input.value==="2006"){
+    document.getElementById("lockPage").style.display="none";
+    startCelebration();
+  }else{
+    error.textContent="Wrong year — surprise is still locked ♡";
+    input.value="";
+    input.focus();
+    input.animate([
+      {transform:"translateX(0)"},
+      {transform:"translateX(-8px)"},
+      {transform:"translateX(8px)"},
+      {transform:"translateX(0)"}
+    ],{duration:350});
+  }
+}
+
+document.getElementById("yearInput").addEventListener("keydown",function(e){
+  if(e.key==="Enter") unlock();
+});
+
+function startCelebration(){
+  const c=document.getElementById("celebration");
+  c.style.display="flex";
+
+  const symbols=["🎉","✨","🎀","💖","♡","✦","🎊","🌸"];
+  for(let i=0;i<90;i++){
+    let x=document.createElement("div");
+    x.className="confetti";
+    x.innerHTML=symbols[Math.floor(Math.random()*symbols.length)];
+    x.style.left=Math.random()*100+"vw";
+    x.style.fontSize=(12+Math.random()*25)+"px";
+    x.style.animationDuration=(3+Math.random()*4)+"s";
+    x.style.animationDelay=(Math.random()*1.5)+"s";
+    c.appendChild(x);
+    setTimeout(()=>x.remove(),8000);
+  }
+
+  for(let i=0;i<18;i++){
+    let b=document.createElement("div");
+    b.className="balloon";
+    b.innerHTML=["🎈","🎈","💖","🎈"][Math.floor(Math.random()*4)];
+    b.style.left=Math.random()*100+"vw";
+    b.style.animationDelay=(Math.random()*2)+"s";
+    c.appendChild(b);
+    setTimeout(()=>b.remove(),8000);
+  }
+}
+
+function enterWebsite(){
+  document.getElementById("celebration").style.display="none";
+  window.scrollTo({top:0,behavior:"smooth"});
+  makeWish();
+}
+
+function goWishes(){
+  document.getElementById("wishes").scrollIntoView({behavior:"smooth"});
+}
+
+function openGift(){
+  document.querySelector(".gift").classList.add("open");
+  document.getElementById("final").classList.add("show");
+  makeWish();
+}
+
+function makeWish(){
+  for(let i=0;i<60;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML=["♡","♥","✦","✧","✨","🎀"][Math.floor(Math.random()*6)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.bottom="-30px";
+    h.style.animationDuration=(2+Math.random()*3)+"s";
+    h.style.fontSize=(12+Math.random()*22)+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+  }
+}
+
+/* Photo entrance animation */
+const photoPage=document.getElementById("photoPage");
+const photos=document.querySelectorAll(".photo");
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      photos.forEach(p=>p.classList.add("show"));
+      observer.disconnect();
+    }
+  });
+},{threshold:.2});
+observer.observe(photoPage);
+</script>
+
+</body>
+</html>
